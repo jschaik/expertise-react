@@ -1,22 +1,19 @@
 //useState
 import {useState} from 'react';
 
-const CreateTweet = ({textInput, setTextInput, tweets, setTweets}) => {
+const CreateTweet = () => {
+  
+ const [textInput, setTextInput] = useState("");
 
  const userInputHandler = (e) => {
   setTextInput(e.target.value);
  }
 
- const submitTweetHandler = (e) => {
-   e.preventDefault();
-   setTweets([...tweets, textInput]);
-   setTextInput('');
- }
-
     return (
-      <form onSubmit={submitTweetHandler}>
+      <form action="">
           <textarea value={textInput} onChange={userInputHandler} cols="30" rows="5"></textarea>
           <button>Submit</button>
+          <h1 onClick={() => setTextInput("")}>{textInput}</h1>
       </form>
     );
   };

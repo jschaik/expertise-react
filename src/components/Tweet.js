@@ -1,9 +1,10 @@
 //arrow function
-const Tweet = ({name, tweets}) => {
+const Tweet = ({name, message}) => {
   return (
     <div className="tweet">
-      <h1>{name}</h1>
-      <h3>{tweets}</h3>
+      <h1>Tweet</h1>
+      <h2>{name}</h2>
+      <h3>{message}</h3>
       <button>Like</button>
       <button>Delete</button>
     </div>

@@ -1,9 +1,11 @@
 import Tweet from "./Tweet";
 
-const TweetList = ({name, tweets}) => {
+const TweetList = ({name, message}) => {
   return (
     <div className="tweetList">
-      <Tweet name={name} tweets={tweets}/>
+      <Tweet name={name} message={message}/>
+      <Tweet name={name} message={message}/>
+      <Tweet name={name} message={message}/>
     </div>
   );
 };
